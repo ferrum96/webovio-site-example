@@ -6,8 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Webovio</title>
 
-	<link src="css/style.css">
-	<script src="js/app.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/app.js" defer></script>
 </head>
 
 <body>
@@ -28,7 +28,7 @@
 
 		<section class="hero">
 			<div class="container">
-				<span class="hero-content">
+				<div class="hero-content">
 					<div class="hero-subtitle">A place where</div>
 					<h1 class="hero-title">A&nbsp;creative agency for redemptive brands</h1>
 					<p class="hero-caption">
@@ -36,7 +36,7 @@
 						digital solutions for startups and enterprises.
 					</p>
 					<a class="hero-link link" href="#">Get content</a>
-				</span>
+				</div>
 			</div>
 		</section>
 
@@ -82,16 +82,16 @@
 
 	<footer class="footer">
 		<div class="container">
-			<span class="footer-contacts-item">
-				<span class="footer-contact">
-					<div class="contact-text">Phone</div>
+			<div class="footer-contacts-item">
+				<div class="footer-contact">
+					<span class="contact-text">Phone</span>
 					<a href="tel:+3250312832" class="contact-link link">+32 50 31 28 32</a>
-				</span>
-				<span class="footer-contact">
-					<div class="contact-text">Address</div>
+				</div>
+				<div class="footer-contact">
+					<span class="contact-text">Address</span>
 					<address class="contact-link link">491 Merlin Crest Suite 963</address>
-				</span>
-			</span>
+				</div>
+			</div>
 			<div class="footer-content-item">
 				<div class="footer-column">
 					<h3 class="footer-column-title">Services</h3>
@@ -131,10 +131,11 @@
 						<img src="assets/icons/google.svg" alt="google">
 						<img src="assets/icons/linkedin.svg" alt="linkedin">
 					</span>
-				</a>
 			</div>
 			<div class="footer-bottom-item">
 				<img src="assets/icons/Footer_logo.svg" alt="footer logo">
+				<small class="copyright">&copy;&nbsp;2020@webovio. All Rights Reserved.</small>
+			</div>
 			</div>
 		</div>
 	</footer>
