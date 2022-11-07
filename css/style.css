@@ -105,36 +105,51 @@ img {
 	cursor: pointer;
 }
 
-.burger {
-	--offset-horizontal: 11px;
-	--offset-vertical: 14px;
-	position: relative;
-	width: 40px;
-	height: 40px;
-	padding: var(--offset-vertical) var(--offset-horizontal);
-	background-color: #f5f6f7;
-	border-radius: 100%;
-	border: 0;
-	cursor: pointer;
+.burger-btn {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: #f5f6f7;
+  border-radius: 100%;
+  position: relative;
 }
 
-.burger-line {
-	position: absolute;
-	left: 50%;
-	top: var(--offset-vertical);
-	display: inline-block;
-	width: calc(100% - var(--offset-horizontal) * 2);
-	height: 2px;
-	background-color: black;
-	transform: translateX(-50%);
+.burger-btn span,
+.burger-btn span::before,
+.burger-btn span::after {
+  position: absolute;
+  top: 50%; margin-top: -1px;
+  left: 50%; margin-left: -9px;
+  width: 18px;
+  height: 2px;
+  background-color: #000;
 }
 
-.burger-line:nth-child(2) {
-	top: calc(var(--offset-vertical) + 6px);
+.burger-btn span::before,
+.burger-btn span::after {
+  content: '';
+  display: block;
+  transition: 0.2s;
 }
 
-.burger-line:nth-child(3) {
-	top: calc(var(--offset-vertical) + 12px);
+.burger-btn span::before {
+  transform: translateY(-7px);
+}
+
+.burger-btn span::after {
+  transform: translateY(7px);
+}
+
+.burger-btn_active span:before {
+  transform: rotate(-45deg);
+}
+
+.burger-btn_active span {
+  height: 0;
+}
+
+.burger-btn_active span:after {
+  transform: rotate(45deg);
 }
 
 .hero {

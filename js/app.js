@@ -2,7 +2,7 @@
 
 const header = document.querySelector('.main-header'),
 	hero = document.querySelector('.hero'),
-	logo = document.querySelector('.logo'),
+	logo = document.querySelector('.main-logo'),
 	headerHeight = header.offsetHeight,
 	heroHeight = hero.offsetHeight;
 
@@ -16,9 +16,19 @@ window.addEventListener('scroll', () => {
 	}
 });
 
+// Scroll to start page
+
 logo.addEventListener('click', () => {
-	window.scrollBy({
-		top: 0,
+	hero.scrollIntoView({
 		behavior: 'smooth'
 	});
+});
+
+// Burger button activate
+
+const burger = document.querySelector('.burger-btn');
+
+burger.addEventListener('click', function(e) {
+  e.preventDefault;
+  burger.classList.toggle('burger-btn_active');
 });
